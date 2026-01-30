@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="icon" type="image/png" href="../images/FavIcon_Rounded.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/script.js"></script>
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="/index.html"><img src="/images/FilerMate_Logo.png" alt="FilerMate Logo"></a>
+      </div>
+
+      <!-- Desktop Menu (visible on larger screens) -->
+      <ul class="desktop-menu" id="nav-links">
+        <li><a href="/index.html">HOME</a></li>
+        <li><a href="/services/index.html">SERVICES</a></li>
+        <li><a href="/contact/index.html">CONTACT US</a></li>
+      </ul>
+
+      <!-- Mobile Menu Toggle -->
+      <button class="menu-toggle" id="menu-toggle">☰</button>
+
+      <!-- Mobile Menu Container -->
+      <div class="mobile-menu-container" id="mobile-menu-container">
+        <ul class="mobile-menu">
+          <li><a href="/index.html">HOME</a></li>
+          <li><a href="/services/index.html">SERVICES</a></li>
+          <li><a href="/contact/index.html">CONTACT US</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <h1 class="section-title">Get in Touch</h1>
+        <p class="section-desc">Have questions about our tax services? We're here to help! Reach out to us using the
+          form below or through our contact details.</p>
+      </div>
+    </section>
+    <div class="container">
+      <div class="contact-wrapper">
+        <!-- Contact Form -->
+        <div class="contact-form-container">
+          <h2>Send us a Message</h2>
+          <form id="contactForm" class="contact-form">
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" required placeholder="Enter your full name">
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email">
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="address">Address</label>
+              <input type="text" id="address" name="address" placeholder="Enter your address">
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" rows="5" required
+                placeholder="Tell us about your tax requirements or any questions you have..."></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="service">Service Interested In</label>
+              <select id="service" name="service">
+                <option value="">Select a service</option>
+                <option value="ntn-salaried">NTN Registration - Salaried</option>
+                <option value="ntn-business">NTN Registration - Business</option>
+                <option value="tax-salaried">Salaried Tax Filing</option>
+                <option value="tax-business">Business Tax Filing</option>
+                <option value="consultation">General Consultation</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn-primary">Send Message</button>
+          </form>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="contact-info-container">
+          <h2>Contact Information</h2>
+
+          <div class="contact-info">
+            <div class="info-item">
+              <div class="info-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div class="info-content">
+                <h4>Phone</h4>
+                <p>+92 335 2996009</p>
+                <p>Mon-Fri, 10AM-10PM</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="info-content">
+                <h4>Email</h4>
+                <p>contact.filermate@gmail.com</p>
+                <!-- <p>support@filermate.com</p> -->
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="info-content">
+                <h4>Office Address</h4>
+                <p>A-55 Gulshan-e-Hadeed Phase - 1</p>
+                <p>Karachi, Sindh, Pakistan</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div class="info-content">
+                <h4>Business Hours</h4>
+                <p>Monday - Friday: 10AM - 10PM</p>
+                <p>Saturday: 10AM - 4PM</p>
+                <p>Sunday: Closed</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="map-placeholder">
+            <div class="map-icon">
+              <i class="fas fa-map"></i>
+            </div>
+            <p>Map integration can be added here</p>
+            <small>Google Maps or other mapping service</small>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+
+      <div class="footer-col">
+        <div class="footer-logo">
+          <a href="/index.html"><img src="/images/logo.png" alt="FilerMate Logo" /></a>
+        </div>
+        <p>Your trusted partner for comprehensive tax services.
+          We help individuals and businesses navigate complex tax situations with expertise and care.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/services/index.html#ntn-registration-salaried">NTN Registration</a></li>
+          <li><a href="/services/index.html#tax-filling-salaried">Salaried Tax Filing</a></li>
+          <li><a href="/services/index.html#tax-filling-business">Business Tax Filling</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/services/index.html">Services</a></li>
+          <li><a href="/contact/index.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <p>Stay updated with our latest news and services</p>
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/company/filermate" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.facebook.com/filermate" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/filermate" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-bottom">
+      <p>© 2025 <strong>FilerMate.</strong> All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/923352996009" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+</body>
+
+</html>
