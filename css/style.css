@@ -177,7 +177,7 @@ main {
 .hero-section {
   background: linear-gradient(135deg, var(--primary-color) 0%, #1a2c5a 100%);
   color: white;
-  padding: 100px 0 80px;
+  padding: 50px 0 50px;
   margin-top: 0;
 }
 
@@ -193,7 +193,7 @@ main {
 .hero-content {
   flex: 1;
   min-width: 300px;
-  max-width: 800px;
+  max-width: 1100px;
 }
 
 .hero-content h1 {
@@ -208,7 +208,7 @@ main {
   margin-bottom: 40px;
   line-height: 1.7;
   opacity: 0.9;
-  max-width: 700px;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -264,7 +264,7 @@ main {
 .page-header {
   background: linear-gradient(135deg, var(--primary-color) 0%, #1a2c5a 100%);
   color: white;
-  padding: 100px 0 60px;
+  padding: 110px 0 97px;
   margin-top: 0;
 }
 
@@ -287,7 +287,7 @@ main {
 .services-content {
   background: linear-gradient(135deg, var(--primary-color) 0%, #1a2c5a 100%);
   color: white;
-  padding: 80px 0 60px;
+  padding: 100px 0 60px;
   margin-top: 0;
   text-align: center;
 }
@@ -338,7 +338,7 @@ main {
 
 /* ===== POPULAR SERVICES SECTION ===== */
 .popular-services {
-  padding: 80px 0;
+  /* padding: 80px 0; */
   background-color: #f8f9fa;
 }
 
@@ -431,7 +431,7 @@ main {
 
 /* ===== REVIEWS SECTION ===== */
 .reviews-section {
-  padding: 80px 0;
+  padding: 40px 0;
   background-color: white;
 }
 
@@ -497,7 +497,7 @@ main {
 .cta-section {
   background: linear-gradient(135deg, var(--primary-color) 0%, #1a2c5a 100%);
   color: white;
-  padding: 80px 0;
+  padding: 40px 0;
   text-align: center;
 }
 
@@ -533,14 +533,14 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 50px;
-  margin: 60px 0;
+  /* margin: 60px 0; */
 }
 
 .contact-form-container,
 .contact-info-container {
   background: white;
   border-radius: 12px;
-  padding: 40px;
+  padding: 20px 40px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
   border: 1px solid #eee;
 }
