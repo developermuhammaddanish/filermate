@@ -1,223 +1,441 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      FilerMate - Income Tax Filling | NTN Registration | Tax Services
+    </title>
+    <link rel="icon" type="image/png" href="images/FavIcon_Rounded.png" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script src="/js/script.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FilerMate - Income Tax Filling | NTN Registration | Tax Services</title>
-  <link rel="icon" type="image/png" href="images/FavIcon_Rounded.png" />
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <script src="/js/script.js"></script>
-</head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <a href="index.html"
+            ><img src="images/FilerMate_Logo.png" alt="FilerMate Logo"
+          /></a>
+        </div>
 
-<body>
-
-  <header>
-    <nav class="navbar">
-      <div class="logo">
-        <a href="index.html"><img src="images/FilerMate_Logo.png" alt="FilerMate Logo"></a>
-      </div>
-
-      <!-- Desktop Menu (visible on larger screens) -->
-      <ul class="desktop-menu" id="nav-links">
-        <li><a href="index.html">HOME</a></li>
-        <li><a href="/services/index.html">SERVICES</a></li>
-        <li><a href="/contact/index.html">CONTACT US</a></li>
-      </ul>
-
-      <!-- Mobile Menu Toggle -->
-      <button class="menu-toggle" id="menu-toggle">☰</button>
-
-      <!-- Mobile Menu Container -->
-      <div class="mobile-menu-container" id="mobile-menu-container">
-        <ul class="mobile-menu">
+        <!-- Desktop Menu (visible on larger screens) -->
+        <ul class="desktop-menu" id="nav-links">
           <li><a href="index.html">HOME</a></li>
           <li><a href="/services/index.html">SERVICES</a></li>
           <li><a href="/contact/index.html">CONTACT US</a></li>
         </ul>
-      </div>
-    </nav>
-  </header>
 
-  <main>
-    <!-- Hero Section -->
-    <section class="hero-section">
-      <div class="container">
-        <div class="hero-content">
-          <h1>Simplify Your Tax Journey with Expert Guidance</h1>
-          <p class="hero-subtitle">Professional income tax filing, NTN registration, and tax advisory services for
-            individuals and businesses. Fast, reliable, and stress-free.</p>
-          <div class="hero-buttons">
-            <a href="/services/index.html" class="btn-primary">View Our Services</a>
-            <a href="/contact/index.html" class="btn-secondary">Get Free Consultation</a>
-          </div>
+        <!-- Mobile Menu Toggle -->
+        <button class="menu-toggle" id="menu-toggle">☰</button>
+
+        <!-- Mobile Menu Container -->
+        <div class="mobile-menu-container" id="mobile-menu-container">
+          <ul class="mobile-menu">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="/services/index.html">SERVICES</a></li>
+            <li><a href="/contact/index.html">CONTACT US</a></li>
+          </ul>
         </div>
-        <!-- <div class="hero-image">
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="container">
+          <div class="hero-content">
+            <h1>Simplify Your Tax Journey with Expert Guidance</h1>
+            <p class="hero-subtitle">
+              Professional income tax filing, NTN registration, and tax advisory
+              services for individuals and businesses. Fast, reliable, and
+              stress-free.
+            </p>
+            <div class="hero-buttons">
+              <a href="/services/index.html" class="btn-primary"
+                >View Our Services</a
+              >
+              <a href="/contact/index.html" class="btn-secondary"
+                >Get Free Consultation</a
+              >
+            </div>
+          </div>
+          <!-- <div class="hero-image">
           <img src="images/tax-hero.svg" alt="Tax Services Illustration" class="hero-illustration">
         </div> -->
-      </div>
-    </section>
+        </div>
+      </section>
 
-    <!-- Popular Services Section -->
-    <section class="popular-services">
-      <div class="container">
-        <h2 class="section-title">Our Popular Services</h2>
-        <p class="section-desc">Choose from our comprehensive range of tax services designed for all your needs.</p>
+      <!-- Tax Calculator Section -->
+      <section class="tax-calculator-section">
+        <div class="container">
+          <h2 class="section-title">Income Tax Calculator</h2>
+          <p class="section-desc">
+            Calculate your estimated income tax for salaried individuals based
+            on FBR tax slabs.
+          </p>
 
-        <div class="services-grid">
-          <div class="service-box">
-            <div class="service-icon">
-              <i class="fas fa-file-alt"></i>
+          <div class="calculator-container">
+            <div class="calculator-card">
+              <!-- Calculator Inputs -->
+              <div class="calculator-inputs">
+                <div class="form-group">
+                  <label for="annual-income">Annual Income (PKR)</label>
+                  <input
+                    type="number"
+                    id="annual-income"
+                    placeholder="Enter your annual income"
+                    min="0"
+                    step="1000"
+                  />
+                  <div class="input-hint">
+                    Enter your total annual salary before tax
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="tax-year">Tax Year</label>
+                  <select id="tax-year">
+                    <option value="2024-2025">2024-2025</option>
+                    <option value="2025-2026">2025-2026</option>
+                  </select>
+                </div>
+
+                <button id="calculate-tax" class="btn-primary">
+                  Calculate Tax
+                </button>
+              </div>
+
+              <!-- Calculator Results -->
+              <div class="calculator-results" id="calculator-results">
+                <div class="results-placeholder">
+                  <div class="placeholder-icon">
+                    <i class="fas fa-calculator"></i>
+                  </div>
+                  <p>
+                    Enter your annual income and select tax year to calculate
+                    your tax liability
+                  </p>
+                </div>
+              </div>
             </div>
-            <h3>Salaried Tax Filing</h3>
-            <p>Professional tax return filing for salaried individuals with maximum refund optimization.</p>
-            <a href="/services/index.html#tax-filling-salaried" class="service-link">Learn More <i
-                class="fas fa-arrow-right"></i></a>
+
+            <!-- Tax Slabs Information -->
+            <div class="tax-slabs-info">
+              <h3>FBR Tax Slabs</h3>
+
+              <!-- 2024-2025 Slabs -->
+              <div class="slab-year active" id="slabs-2024">
+                <h4>Tax Year 2024-2025</h4>
+                <div class="slab-table">
+                  <div class="slab-header">
+                    <span>Income Range (PKR)</span>
+                    <span>Tax Rate</span>
+                  </div>
+                  <div class="slab-row">
+                    <span>Up to 600,000</span>
+                    <span class="tax-rate">0%</span>
+                  </div>
+                  <div class="slab-row">
+                    <span>600,001 - 1,200,000</span>
+                    <span class="tax-rate">5% on excess over 600,000</span>
+                  </div>
+                  <div class="slab-row">
+                    <span>1,200,001 - 2,200,000</span>
+                    <span class="tax-rate"
+                      >30,000 + 15% on excess over 1,200,000</span
+                    >
+                  </div>
+                  <div class="slab-row">
+                    <span>2,200,001 - 3,200,000</span>
+                    <span class="tax-rate"
+                      >180,000 + 25% on excess over 2,200,000</span
+                    >
+                  </div>
+                  <div class="slab-row">
+                    <span>Above 3,200,000</span>
+                    <span class="tax-rate">35% on excess over 3,200,000</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 2025-2026 Slabs -->
+              <div class="slab-year" id="slabs-2025">
+                <h4>Tax Year 2025-2026</h4>
+                <div class="slab-table">
+                  <div class="slab-header">
+                    <span>Income Range (PKR)</span>
+                    <span>Tax Rate</span>
+                  </div>
+                  <div class="slab-row">
+                    <span>Up to 600,000</span>
+                    <span class="tax-rate">0%</span>
+                  </div>
+                  <div class="slab-row">
+                    <span>600,001 - 1,200,000</span>
+                    <span class="tax-rate">5% on excess over 600,000</span>
+                  </div>
+                  <div class="slab-row">
+                    <span>1,200,001 - 2,400,000</span>
+                    <span class="tax-rate"
+                      >30,000 + 10% on excess over 1,200,000</span
+                    >
+                  </div>
+                  <div class="slab-row">
+                    <span>2,400,001 - 3,200,000</span>
+                    <span class="tax-rate"
+                      >150,000 + 15% on excess over 2,400,000</span
+                    >
+                  </div>
+                  <div class="slab-row">
+                    <span>3,200,001 - 4,100,000</span>
+                    <span class="tax-rate"
+                      >345,000 + 30% on excess over 3,200,000</span
+                    >
+                  </div>
+                  <div class="slab-row">
+                    <span>Above 4,100,000</span>
+                    <span class="tax-rate"
+                      >615,000 + 35% on excess over 4,100,000</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="calculator-note">
+                <p>
+                  <i class="fas fa-info-circle"></i> This calculator provides an
+                  estimate based on FBR tax slabs. Actual tax liability may vary
+                  based on deductions, allowances, and other factors.
+                </p>
+              </div>
+            </div>
           </div>
+        </div>
+      </section>
 
-          <div class="service-box">
-            <div class="service-icon">
-              <i class="fas fa-briefcase"></i>
+      <!-- Popular Services Section -->
+      <section class="popular-services">
+        <div class="container">
+          <h2 class="section-title">Our Popular Services</h2>
+          <p class="section-desc">
+            Choose from our comprehensive range of tax services designed for all
+            your needs.
+          </p>
+
+          <div class="services-grid">
+            <div class="service-box">
+              <div class="service-icon">
+                <i class="fas fa-file-alt"></i>
+              </div>
+              <h3>Salaried Tax Filing</h3>
+              <p>
+                Professional tax return filing for salaried individuals with
+                maximum refund optimization.
+              </p>
+              <a
+                href="/services/index.html#tax-filling-salaried"
+                class="service-link"
+                >Learn More <i class="fas fa-arrow-right"></i
+              ></a>
             </div>
-            <h3>Business Tax Filing</h3>
-            <p>Complete tax solutions for businesses, partnerships, and self-employed professionals.</p>
-            <a href="/services/index.html#tax-filling-business" class="service-link">Learn More <i
-                class="fas fa-arrow-right"></i></a>
+
+            <div class="service-box">
+              <div class="service-icon">
+                <i class="fas fa-briefcase"></i>
+              </div>
+              <h3>Business Tax Filing</h3>
+              <p>
+                Complete tax solutions for businesses, partnerships, and
+                self-employed professionals.
+              </p>
+              <a
+                href="/services/index.html#tax-filling-business"
+                class="service-link"
+                >Learn More <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+
+            <div class="service-box">
+              <div class="service-icon">
+                <i class="fas fa-id-card"></i>
+              </div>
+              <h3>NTN Registration</h3>
+              <p>
+                Quick and hassle-free NTN registration for both salaried
+                individuals and businesses.
+              </p>
+              <a
+                href="/services/index.html#ntn-registration-salaried"
+                class="service-link"
+                >Learn More <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
           </div>
+        </div>
+      </section>
 
-          <div class="service-box">
-            <div class="service-icon">
-              <i class="fas fa-id-card"></i>
+      <!-- Reviews Section -->
+      <section class="reviews-section">
+        <div class="container">
+          <h2 class="section-title">What Our Clients Say</h2>
+          <p class="section-desc">
+            Trusted by hundreds of individuals and businesses for their tax
+            needs.
+          </p>
+
+          <div class="reviews-grid">
+            <div class="review-card">
+              <div class="review-stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="review-text">
+                "Quick NTN registration and excellent follow-up. Highly
+                recommended for tax services."
+              </p>
+              <div class="review-author">
+                <h4>Naeem Ahmed</h4>
+                <p>Software Engineer</p>
+              </div>
             </div>
-            <h3>NTN Registration</h3>
-            <p>Quick and hassle-free NTN registration for both salaried individuals and businesses.</p>
-            <a href="/services/index.html#ntn-registration-salaried" class="service-link">Learn More <i
-                class="fas fa-arrow-right"></i></a>
+
+            <div class="review-card">
+              <div class="review-stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <!-- <i class="fas fa-star-half-alt"></i> -->
+              </div>
+              <p class="review-text">
+                "Professional service for our small business. They handled
+                everything from NTN to annual filing."
+              </p>
+              <div class="review-author">
+                <h4>Sher Ali</h4>
+                <p>Small Business Owner</p>
+              </div>
+            </div>
+
+            <div class="review-card">
+              <div class="review-stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="review-text">
+                "FilerMate made my tax filing incredibly easy. They got me a
+                larger refund than I expected!"
+              </p>
+              <div class="review-author">
+                <h4>Ahmed</h4>
+                <p>Salaried Professional</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="cta-section">
+        <div class="container">
+          <h2>Ready to Simplify Your Taxes?</h2>
+          <p>
+            Contact us today for a free consultation and let our experts handle
+            your tax needs.
+          </p>
+          <a href="/contact/index.html" class="btn-primary">Contact Us Now</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-col">
+          <div class="footer-logo">
+            <a href="index.html"
+              ><img src="images/logo.png" alt="FilerMate Logo"
+            /></a>
+          </div>
+          <p>
+            Your trusted partner for comprehensive tax services. We help
+            individuals and businesses navigate complex tax situations with
+            expertise and care.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li>
+              <a href="/services/index.html#ntn-registration-salaried"
+                >NTN Registration</a
+              >
+            </li>
+            <li>
+              <a href="/services/index.html#tax-filling-salaried"
+                >Salaried Tax Filing</a
+              >
+            </li>
+            <li>
+              <a href="/services/index.html#tax-filling-business"
+                >Business Tax Filling</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="/services/index.html">Services</a></li>
+            <li><a href="/contact/index.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <p>Stay updated with our latest news and services</p>
+          <div class="social-icons">
+            <a href="https://www.linkedin.com/company/filermate" target="_blank"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a href="https://www.facebook.com/filermate" target="_blank"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="https://www.instagram.com/filermate" target="_blank"
+              ><i class="fab fa-instagram"></i
+            ></a>
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- Reviews Section -->
-    <section class="reviews-section">
-      <div class="container">
-        <h2 class="section-title">What Our Clients Say</h2>
-        <p class="section-desc">Trusted by hundreds of individuals and businesses for their tax needs.</p>
-
-        <div class="reviews-grid">
-          <div class="review-card">
-            <div class="review-stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <p class="review-text">"Quick NTN registration and excellent follow-up. Highly recommended for tax
-              services."</p>
-            <div class="review-author">
-              <h4>Naeem Ahmed</h4>
-              <p>Software Engineer</p>
-            </div>
-          </div>
-
-          <div class="review-card">
-            <div class="review-stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <!-- <i class="fas fa-star-half-alt"></i> -->
-            </div>
-            <p class="review-text">"Professional service for our small business. They handled everything from NTN to
-              annual filing."</p>
-            <div class="review-author">
-              <h4>Sher Ali</h4>
-              <p>Small Business Owner</p>
-            </div>
-          </div>
-
-          <div class="review-card">
-            <div class="review-stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <p class="review-text">"FilerMate made my tax filing incredibly easy. They got me a larger refund than I
-              expected!"</p>
-            <div class="review-author">
-              <h4>Ahmed</h4>
-              <p>Salaried Professional</p>
-            </div>
-          </div>
-        </div>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <p>© 2026 <strong>FilerMate.</strong> All Rights Reserved</p>
       </div>
-    </section>
+    </footer>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-      <div class="container">
-        <h2>Ready to Simplify Your Taxes?</h2>
-        <p>Contact us today for a free consultation and let our experts handle your tax needs.</p>
-        <a href="/contact/index.html" class="btn-primary">Contact Us Now</a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="footer-container">
-
-      <div class="footer-col">
-        <div class="footer-logo">
-          <a href="index.html"><img src="images/logo.png" alt="FilerMate Logo" /></a>
-        </div>
-        <p>Your trusted partner for comprehensive tax services.
-          We help individuals and businesses navigate complex tax situations with expertise and care.</p>
-      </div>
-
-      <div class="footer-col">
-        <h4>Services</h4>
-        <ul>
-          <li><a href="/services/index.html#ntn-registration-salaried">NTN Registration</a></li>
-          <li><a href="/services/index.html#tax-filling-salaried">Salaried Tax Filing</a></li>
-          <li><a href="/services/index.html#tax-filling-business">Business Tax Filling</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="/services/index.html">Services</a></li>
-          <li><a href="/contact/index.html">Contact</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4>Follow Us</h4>
-        <p>Stay updated with our latest news and services</p>
-        <div class="social-icons">
-          <a href="https://www.linkedin.com/company/filermate" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://www.facebook.com/filermate" target="_blank"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://www.instagram.com/filermate" target="_blank"><i class="fab fa-instagram"></i></a>
-        </div>
-      </div>
-
-    </div>
-    <div class="footer-divider"></div>
-    <div class="footer-bottom">
-      <p>© 2026 <strong>FilerMate.</strong> All Rights Reserved</p>
-    </div>
-  </footer>
-
-  <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/923352996009" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-</body>
-
+    <!-- WhatsApp Floating Button -->
+    <a
+      href="https://wa.me/923352996009"
+      class="whatsapp-float"
+      target="_blank"
+      aria-label="Chat on WhatsApp"
+    >
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </body>
 </html>
