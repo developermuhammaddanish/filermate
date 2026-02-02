@@ -533,7 +533,7 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 50px;
-  /* margin: 60px 0; */
+  margin: 60px 0;
 }
 
 .contact-form-container,

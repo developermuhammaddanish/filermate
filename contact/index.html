@@ -53,48 +53,60 @@
         <!-- Contact Form -->
         <div class="contact-form-container">
           <h2>Send us a Message</h2>
-          <form id="contactForm" class="contact-form">
+          <form name="contact"
+              method="POST"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+              action="/thank-you"
+              id="contactForm"
+              class="contact-form">
+
+          <input type="hidden" name="form-name" value="contact">
+          <p hidden>
+            <label>Don’t fill this out: <input name="bot-field" /></label>
+          </p>
+
+          <div class="form-group">
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your full name">
+          </div>
+
+          <div class="form-row">
             <div class="form-group">
-              <label for="name">Full Name *</label>
-              <input type="text" id="name" name="name" required placeholder="Enter your full name">
-            </div>
-
-            <div class="form-row">
-              <div class="form-group">
-                <label for="email">Email Address *</label>
-                <input type="email" id="email" name="email" required placeholder="Enter your email">
-              </div>
-
-              <div class="form-group">
-                <label for="phone">Phone Number *</label>
-                <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="address">Address</label>
-              <input type="text" id="address" name="address" placeholder="Enter your address">
-            </div>
-
-            <div class="form-group">
-              <label for="message">Message *</label>
-              <textarea id="message" name="message" rows="5" required
-                placeholder="Tell us about your tax requirements or any questions you have..."></textarea>
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" required placeholder="Enter your email">
             </div>
 
             <div class="form-group">
-              <label for="service">Service Interested In</label>
-              <select id="service" name="service">
-                <option value="">Select a service</option>
-                <option value="ntn-salaried">NTN Registration - Salaried</option>
-                <option value="ntn-business">NTN Registration - Business</option>
-                <option value="tax-salaried">Salaried Tax Filing</option>
-                <option value="tax-business">Business Tax Filing</option>
-                <option value="consultation">General Consultation</option>
-              </select>
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
             </div>
+          </div>
 
-            <button type="submit" class="btn-primary">Send Message</button>
+          <div class="form-group">
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" placeholder="Enter your address">
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" rows="5" required
+              placeholder="Tell us about your tax requirements or any questions you have..."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="service">Service Interested In</label>
+            <select id="service" name="service">
+              <option value="">Select a service</option>
+              <option value="ntn-salaried">NTN Registration - Salaried</option>
+              <option value="ntn-business">NTN Registration - Business</option>
+              <option value="tax-salaried">Salaried Tax Filing</option>
+              <option value="tax-business">Business Tax Filing</option>
+              <option value="consultation">General Consultation</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn-primary">Send Message</button>
           </form>
         </div>
 
