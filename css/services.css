@@ -139,11 +139,20 @@
   min-width: 160px;
 }
 
+.request-btn a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
 .request-btn:hover {
   background-color: var(--accent-color);
-  color: white;
+  /* color: white; */
   transform: translateY(-2px);
   box-shadow: 0 4px 15px rgba(238, 126, 39, 0.2);
+}
+
+.request-btn:hover a {
+  color: white;
 }
 
 .whatsapp-btn {
@@ -159,6 +168,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.whatsapp-btn a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.whatsapp-btn a i {
+  color: #fff;
 }
 
 .whatsapp-btn:hover {
