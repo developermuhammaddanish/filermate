@@ -55,20 +55,58 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Highlight active menu item based on current page
+  // const currentPath = window.location.pathname;
+  // const links = document.querySelectorAll(".navbar a");
+
+  // links.forEach((link) => {
+  //   const href = link.getAttribute("href");
+
+  //   // Check if this link corresponds to the current page
+  //   if (
+  //     currentPath.endsWith(href) ||
+  //     (currentPath === "/" && href === "index.html") ||
+  //     (currentPath === "" && href === "index.html")
+  //   ) {
+  //     link.classList.add("active");
+  //   } else {
+  //     link.classList.remove("active");
+  //   }
+  // });
+
+  // Highlight active menu item correctly
   const currentPath = window.location.pathname;
-  const links = document.querySelectorAll(".navbar a");
 
-  links.forEach((link) => {
-    const href = link.getAttribute("href");
+  document.querySelectorAll(".navbar a").forEach((link) => {
+    let href = link.getAttribute("href");
 
-    // Check if this link corresponds to the current page
+    // Convert relative links to clean paths
+    href = href.replace("index.html", "");
+
+    // Home page
     if (
-      currentPath.endsWith(href) ||
-      (currentPath === "/" && href === "index.html") ||
-      (currentPath === "" && href === "index.html")
+      (currentPath === "/" || currentPath === "/index.html") &&
+      (href === "" || href === "/")
     ) {
       link.classList.add("active");
-    } else {
+    }
+
+    // Services page
+    else if (
+      currentPath.includes("/services") &&
+      href.includes("/services")
+    ) {
+      link.classList.add("active");
+    }
+
+    // Contact page
+    else if (
+      currentPath.includes("/contact") &&
+      href.includes("/contact")
+    ) {
+      link.classList.add("active");
+    }
+
+    else {
       link.classList.remove("active");
     }
   });
