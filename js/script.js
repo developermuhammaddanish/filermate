@@ -54,25 +54,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Highlight active menu item based on current page
-  // const currentPath = window.location.pathname;
-  // const links = document.querySelectorAll(".navbar a");
-
-  // links.forEach((link) => {
-  //   const href = link.getAttribute("href");
-
-  //   // Check if this link corresponds to the current page
-  //   if (
-  //     currentPath.endsWith(href) ||
-  //     (currentPath === "/" && href === "index.html") ||
-  //     (currentPath === "" && href === "index.html")
-  //   ) {
-  //     link.classList.add("active");
-  //   } else {
-  //     link.classList.remove("active");
-  //   }
-  // });
-
   // Highlight active menu item correctly
   const currentPath = window.location.pathname;
 
@@ -94,6 +75,22 @@ document.addEventListener("DOMContentLoaded", function () {
     else if (
       currentPath.includes("/services") &&
       href.includes("/services")
+    ) {
+      link.classList.add("active");
+    }
+
+    // Tax Tool page
+    else if (
+      currentPath.includes("/tax-tools") &&
+      href.includes("/tax-tools")
+    ) {
+      link.classList.add("active");
+    }
+
+     // Blog page
+    else if (
+      currentPath.includes("/blog") &&
+      href.includes("/blog")
     ) {
       link.classList.add("active");
     }
@@ -499,4 +496,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Initialize the calculator
   taxCalculator.init();
+
+  // Sticky navbar scroll effect
+  const header = document.querySelector("header");
+
+  window.addEventListener("scroll", function () {
+    header.classList.toggle("scrolled", window.scrollY > 20);
+  });
 });

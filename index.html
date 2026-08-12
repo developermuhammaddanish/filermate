@@ -56,7 +56,9 @@
       <ul class="desktop-menu" id="nav-links">
         <li><a href="index.html">HOME</a></li>
         <li><a href="/services/index.html">SERVICES</a></li>
-        <li><a href="/contact/index.html">CONTACT US</a></li>
+        <li><a href="/tax-tools/index.html">TAX TOOLS</a></li>
+        <li><a href="/blog/index.html">BLOG</a></li>
+        <li><a href="/contact/index.html">CONTACT</a></li>
       </ul>
 
       <!-- Mobile Menu Toggle -->
@@ -67,7 +69,9 @@
         <ul class="mobile-menu">
           <li><a href="index.html">HOME</a></li>
           <li><a href="/services/index.html">SERVICES</a></li>
-          <li><a href="/contact/index.html">CONTACT US</a></li>
+          <li><a href="/tax-tools/index.html">TAX TOOLS</a></li>
+          <li><a href="/blog/index.html">BLOG</a></li>
+          <li><a href="/contact/index.html">CONTACT</a></li>
         </ul>
       </div>
     </nav>
@@ -92,151 +96,6 @@
         <!-- <div class="hero-image">
           <img src="images/tax-hero.svg" alt="Tax Services Illustration" class="hero-illustration">
         </div> -->
-      </div>
-      <a href="https://wa.me/923352996009" class="offer-tag" target="_blank" aria-label="Chat on WhatsApp">
-        <div class="offer-string"></div>
-
-        <div class="offer-card">
-          <span class="offer-top">SPECIAL</span>
-          <span class="offer-top">OFFER</span>
-
-          <div class="offer-discount">
-            20% OFF
-          </div>
-
-          <span class="offer-bottom">ON ALL</span>
-          <span class="offer-bottom">SERVICES</span>
-        </div>
-      </a>
-    </section>
-
-    <!-- Tax Calculator Section -->
-    <section class="tax-calculator-section">
-      <div class="container">
-        <h2 class="section-title">Income Tax Calculator</h2>
-        <p class="section-desc">
-          Calculate your estimated income tax for salaried individuals based
-          on FBR tax slabs.
-        </p>
-
-        <div class="calculator-container">
-          <div class="calculator-card">
-            <!-- Calculator Inputs -->
-            <div class="calculator-inputs">
-              <div class="form-group">
-                <label for="annual-income">Annual Income (PKR)</label>
-                <input type="number" id="annual-income" placeholder="Enter your annual income" min="0" step="1000" />
-                <div class="input-hint">
-                  Enter your total annual salary before tax
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label for="tax-year">Tax Year</label>
-                <select id="tax-year">
-                  <option value="2024-2025">2024-2025</option>
-                  <option value="2025-2026">2025-2026</option>
-                </select>
-              </div>
-
-              <button id="calculate-tax" class="btn-primary">
-                Calculate Tax
-              </button>
-            </div>
-
-            <!-- Calculator Results -->
-            <div class="calculator-results" id="calculator-results">
-              <div class="results-placeholder">
-                <div class="placeholder-icon">
-                  <i class="fas fa-calculator"></i>
-                </div>
-                <p>
-                  Enter your annual income and select tax year to calculate
-                  your tax liability
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Tax Slabs Information -->
-          <div class="tax-slabs-info">
-            <h3>FBR Tax Slabs</h3>
-
-            <!-- 2024-2025 Slabs -->
-            <div class="slab-year active" id="slabs-2024">
-              <h4>Tax Year 2024-2025</h4>
-              <div class="slab-table">
-                <div class="slab-header">
-                  <span>Income Range (PKR)</span>
-                  <span>Tax Rate</span>
-                </div>
-                <div class="slab-row">
-                  <span>Up to 600,000</span>
-                  <span class="tax-rate">0%</span>
-                </div>
-                <div class="slab-row">
-                  <span>600,001 - 1,200,000</span>
-                  <span class="tax-rate">5% on excess over 600,000</span>
-                </div>
-                <div class="slab-row">
-                  <span>1,200,001 - 2,200,000</span>
-                  <span class="tax-rate">30,000 + 15% on excess over 1,200,000</span>
-                </div>
-                <div class="slab-row">
-                  <span>2,200,001 - 3,200,000</span>
-                  <span class="tax-rate">180,000 + 25% on excess over 2,200,000</span>
-                </div>
-                <div class="slab-row">
-                  <span>Above 3,200,000</span>
-                  <span class="tax-rate">35% on excess over 3,200,000</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- 2025-2026 Slabs -->
-            <div class="slab-year" id="slabs-2025">
-              <h4>Tax Year 2025-2026</h4>
-              <div class="slab-table">
-                <div class="slab-header">
-                  <span>Income Range (PKR)</span>
-                  <span>Tax Rate</span>
-                </div>
-                <div class="slab-row">
-                  <span>Up to 600,000</span>
-                  <span class="tax-rate">0%</span>
-                </div>
-                <div class="slab-row">
-                  <span>600,001 - 1,200,000</span>
-                  <span class="tax-rate">5% on excess over 600,000</span>
-                </div>
-                <div class="slab-row">
-                  <span>1,200,001 - 2,400,000</span>
-                  <span class="tax-rate">30,000 + 10% on excess over 1,200,000</span>
-                </div>
-                <div class="slab-row">
-                  <span>2,400,001 - 3,200,000</span>
-                  <span class="tax-rate">150,000 + 15% on excess over 2,400,000</span>
-                </div>
-                <div class="slab-row">
-                  <span>3,200,001 - 4,100,000</span>
-                  <span class="tax-rate">345,000 + 30% on excess over 3,200,000</span>
-                </div>
-                <div class="slab-row">
-                  <span>Above 4,100,000</span>
-                  <span class="tax-rate">615,000 + 35% on excess over 4,100,000</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="calculator-note">
-              <p>
-                <i class="fas fa-info-circle"></i> This calculator provides an
-                estimate based on FBR tax slabs. Actual tax liability may vary
-                based on deductions, allowances, and other factors.
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
 
