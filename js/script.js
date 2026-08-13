@@ -504,3 +504,66 @@ document.addEventListener("DOMContentLoaded", function () {
     header.classList.toggle("scrolled", window.scrollY > 20);
   });
 });
+
+// Reviews slider
+document.addEventListener("DOMContentLoaded", function () {
+  const reviewsGrid = document.querySelector(".reviews-grid");
+  const prevButton = document.querySelector(".prev-review");
+  const nextButton = document.querySelector(".next-review");
+
+  if (!reviewsGrid || !prevButton || !nextButton) return;
+
+  let currentIndex = 0;
+
+  function getVisibleReviews() {
+    if (window.innerWidth <= 768) {
+      return 1;
+    }
+
+    if (window.innerWidth <= 992) {
+      return 2;
+    }
+
+    return 3;
+  }
+
+  function updateSlider() {
+    const cards = document.querySelectorAll(".review-card");
+    const visibleReviews = getVisibleReviews();
+    const maxIndex = cards.length - visibleReviews;
+
+    currentIndex = Math.max(0, Math.min(currentIndex, maxIndex));
+
+    const cardWidth = cards[0].offsetWidth;
+    const gap = 30;
+
+    const translateX = currentIndex * (cardWidth + gap);
+
+    reviewsGrid.style.transform = `translateX(-${translateX}px)`;
+
+    // Disable buttons when reaching start/end
+    prevButton.disabled = currentIndex === 0;
+    nextButton.disabled = currentIndex >= maxIndex;
+  }
+
+  nextButton.addEventListener("click", function () {
+    const cards = document.querySelectorAll(".review-card");
+    const maxIndex = cards.length - getVisibleReviews();
+
+    if (currentIndex < maxIndex) {
+      currentIndex++;
+      updateSlider();
+    }
+  });
+
+  prevButton.addEventListener("click", function () {
+    if (currentIndex > 0) {
+      currentIndex--;
+      updateSlider();
+    }
+  });
+
+  window.addEventListener("resize", updateSlider);
+
+  updateSlider();
+});
